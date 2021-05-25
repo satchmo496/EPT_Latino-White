@@ -1,0 +1,52 @@
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/qualtrics/quep5.js'], function(APIConstructor, epExtension){
+	var API = new APIConstructor();
+	var global = API.getGlobal();
+	return epExtension(
+	{
+			//The prime categories.
+			primeCats :  [
+				{
+					name : 'Latino', //Will appear in the data.
+					//An array of all media objects for this category.
+					mediaArray : [
+    				    {image : 'LF1.bmp'}, 
+    					{image : 'LF2.bmp'}, 
+    					{image : 'LF3.bmp'}, 
+    					{image : 'LF4.bmp'}, 
+    					{image : 'LF5.bmp'}, 
+    					{image : 'LM1.bmp'}, 
+    					{image : 'LM2.bmp'}, 
+    					{image : 'LM3.bmp'}, 
+    					{image : 'LM4.bmp'}, 
+    					{image : 'LM5.bmp'}
+				    ]
+				}, 
+				{
+					name : 'White', //Will appear in the data.
+					//An array of all media objects for this category.
+					mediaArray : [
+    					{image : 'WhFL1.bmp'}, 
+    					{image : 'WhFL2.bmp'}, 
+    					{image : 'WhFL3.bmp'}, 
+    					{image : 'WhFL4.bmp'}, 
+    					{image : 'WhFL5.bmp'}, 
+    					{image : 'WhML1.bmp'}, 
+    					{image : 'WhML2.bmp'}, 
+    					{image : 'WhML3.bmp'}, 
+    					{image : 'WhML4.bmp'}, 
+    					{image : 'WhML5.bmp'}
+    				]
+				}
+			],	
+
+			nTrialsPerPrimeTargetPair:15, //How many trials in a block, per prime-target combination (always three blocks).
+			fixationDuration : 500, 
+			errorFBDuration : 1500, 
+			ITIDuration : 500,
+
+			//Set the image folder here.
+			base_url : {
+				image : "https://satchmo496.github.io/images/"
+			}
+	});
+});
